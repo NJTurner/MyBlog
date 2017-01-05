@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header(${'Resumé'})">
+</head>
+<body>
+<div class="container-fluid">
+    <div th:replace="fragments/navbar :: navbar" class="row">
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <img alt="NickTurner" src="img/nick.jpg" class="img-circle" width="304"
+                 height="304"/>
+            <h1>
+                <strong>BIO</strong>
+            </h1>
+            <p>Nicholas Turner is a Web Development student looking for a job in the greater San
+                Antonio area. A
+                graduate of the University of Hartford, in Connecticut, Nicholas earned a Bachelors of Science in
+                Audio
+                Engineering Technology. Originally from New Jersey, he moved back to the area after college to start
+                his
+                career in Brooklyn, New York. He worked his way up from intern to Wholesale Distribution manager at
+                Mishka NYC for 3 years. Moved to San Antonio in 2014 and has worked in Customer Service since
+                then.</p>
+
+            <p>Nick enrolled in Codeup in September 2016, in order to make a career change and is looking forward to
+                working in the tech community in San Antonio.</p>
+        </div>
+        <div class="col-md-6">
+            <h1 class="text-center">
+                <strong>RESUME</strong>
+            </h1>
+            <div class="row">
+                <div class="col-md-8">
+                    <h4 class="text-left">
+                        <em>Education</em>
+                    </h4>
+                    <p class="text-left"><strong>Full-Stack Web Developer Course</strong><br/>
+                        Codeup | San Antonio, TX <br/>
+                        <em>4 month Program</em>
+                    </p>
+                    <p class="text-left"><strong>Bachelor of Science - Audio Engineering Technology</strong><br/>
+                        University of Hartford | Hartford, CT <br/>
+                        <em>5 year Degree</em>
+                    </p>
+                    <hr>
+                    <h4 class="section_resume"><em>Employment</em></h4>
+                    <div class="resume_row">
+                        <p class="text-left"><strong>Customer Service Specialist I</strong><br/>
+                            Harland Clarke | San Antonio, TX <br/>
+                            <em>Taking check orders and handling customer service for Bank of America customers</em>
+                        </p>
+                        <p class="text-left"><strong>Event Marketing/Promotions Representative</strong><br/>
+                            Silverleaf Resorts | San Antonio, TX <br/>
+                            <em>Marketing representative at malls and major events in the San Antonio market.</em>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <p class="codeup_dates"><strong>In Progress</strong><br><em>Graduating February 2017</em>
+                    </p>
+                    <p class="codeup_dates"><strong>Completed</strong><br><em>2006-2011</em>
+                    </p>
+                    <p class="work_dates"><em>09/2015-09/2016</em>
+                    </p>
+                    <p class="work_dates"><em>01/2015-09/2015</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div th:replace="fragments/footer :: footer" class="row footer">
+</div>
+</div>
+</body>
+</html>

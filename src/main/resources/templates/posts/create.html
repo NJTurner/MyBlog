@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header(${'Create a Blog Post'})">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                    </button> <a class="navbar-brand" href="/posts">My Blog</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/posts/create">Create A Post</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+<h1>Create a New Blog Post</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <form th:action="@{/posts/create}" th:object="${post}" method="post" role="form">
+                    <div class="form-group">
+                        <label>
+                            Title:
+                        </label>
+                        <input th:field="*{title}" type="text" class="form-control" id="title" />
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Body:</label>
+                        <textarea th:field="*{body}" class="form-control" rows="5" id="comment"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-default">
+                        Submit
+                    </button>
+                </form>
+                <p>
+                    <a href="/posts" class="btn btn-primary btn-large">Back to Posts</a>
+                </p>
+            </div>
+        </div>
+<div th:replace="fragments/footer :: footer" class="row footer">
+</div>
+</div>
+</body>
+</html>
