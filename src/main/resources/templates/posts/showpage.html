@@ -11,6 +11,7 @@
             <div class="col-md-12">
                     <h3 th:text="${post.title}"></h3>
                     <p th:text="${post.body}"></p>
+                <p>Posted by <span th:text="${post.owner.username}"></span></p>
             </div>
         </div>
     <a th:href="@{'/posts/' + ${post.id} + '/edit'}">Edit Post</a>
